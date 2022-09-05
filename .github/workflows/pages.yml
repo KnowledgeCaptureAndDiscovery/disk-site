@@ -9,7 +9,7 @@ env:
   #variables related with the continuous delivery
   MANIFEST_REPOSITORY: KnowledgeCaptureAndDiscovery/k8s
   MANIFEST_REPOSITORY_BRANCH: master
-  MANIFEST_REPOSITORY_PATH: disk-server/disk/web
+  MANIFEST_REPOSITORY_PATH: disk-server/disk/website
   KUSTOMIZE_IMAGE_NAME: website
 permissions:
   contents: write
