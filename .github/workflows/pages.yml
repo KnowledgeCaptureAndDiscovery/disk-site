@@ -14,8 +14,7 @@ env:
 permissions:
   contents: write
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -47,7 +46,7 @@ jobs:
 
   update:
     # This job the container running on k8s cluster
-    needs: [build, security]
+    needs: [build]
     name: "Deploy the app"
     if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
