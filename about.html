@@ -1,78 +1,147 @@
 <!DOCTYPE html>
-<html lang=en>
-<title>DISK: Automated DIscovery of Scientific Knowledge</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/w3-theme-brown.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    //load the parts of the page that are always the same across the portal
-    $("#footerContent").load("footer.html");
-});
-</script>
+<html lang="en">
+  <title>DISK: Automated DIscovery of Scientific Knowledge</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/w3.css" />
+  <link rel="stylesheet" href="css/w3-theme-brown.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      //load the parts of the page that are always the same across the portal
+      $("#footerContent").load("footer.html");
+    });
+  </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118863115-5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-118863115-5"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'UA-118863115-5');
-</script>
+    gtag("config", "UA-118863115-5");
+  </script>
 
-<body>
+  <body>
+    <header class="w3-container w3-theme w3-padding w3-center" id="topMenu">
+      <div class="w3-container">
+        <div class="w3-container">
+          <h2>
+            <img src="images/LogoWithNameSmall.png" alt="DISK" /> DISK:
+            Automated DIscovery of Scientific Knowledge
+          </h2>
+        </div>
+      </div>
 
-<header class="w3-container w3-theme w3-padding w3-center" id="topMenu"> 
-<div class="w3-container">
-    <div class=" w3-container">
-      <h2><img src="images/LogoWithNameSmall.png" alt="DISK"/>
-        DISK: Automated DIscovery of Scientific Knowledge</h2>
+      <div class="w3-center">
+        <div class="w3-bar w3-theme">
+          <a href="index.html" class="w3-bar-item w3-button w3-padding-8"
+            >Home</a
+          >
+          <a href="portal.html" class="w3-bar-item w3-button w3-padding-8"
+            >Portal</a
+          >
+          <a
+            href="about.html"
+            class="w3-bar-item w3-button w3-padding-8 selected"
+            >About</a
+          >
+          <a href="people.html" class="w3-bar-item w3-button w3-padding-8"
+            >People</a
+          >
+          <a href="papers.html" class="w3-bar-item w3-button w3-padding-8"
+            >Papers</a
+          >
+          <a href="sponsors.html" class="w3-bar-item w3-button w3-padding-8"
+            >Sponsors</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <div class="w3-content w3-justify">
+      <h3 class="w3-center">The DISK Project</h3>
+      <p>
+        The automation of important aspects of scientific discovery will
+        significantly accelerate. Our claim is that given the right knowledge
+        and methods, computers could autonomously carry out discovery processes
+        by searching hypothesis spaces in a systematic, comprehensive, and
+        efficient manner.<br /><br />
+        In this project, we are investigating a novel approach to automate the
+        hypothesize-test-evaluate discovery cycle with an intelligent system
+        that a scientist can task with lines of inquiry to test hypotheses of
+        interest. We are implementing this approach in DISK (automated DIscovery
+        of Scientific Knowledge), a system that extends the existing WINGS
+        intelligent workflow system for scientific data analysis, and applying
+        it to multi-omics.<br /><br />
+        Our work to date has focused on four major research objectives:
+      </p>
+
+      <p>
+        1) Representing hypotheses and associated evidence and confidence
+        values;
+      </p>
+
+      <p>
+        2) Formulating lines of inquiry that express how to test hypotheses by
+        running data analysis workflows against the data available;
+      </p>
+
+      <p>
+        3) Designing a meta-analysis engine that uses meta-workflows to assess
+        the results of lines of inquiry and to revise and extend the original
+        hypotheses accordingly; and
+      </p>
+
+      <p>
+        4) Developing intelligent agents for interactive discovery that explain
+        new findings to scientists.
+      </p>
+
+      <figure role="group" class="caption caption-img align-center">
+        <img
+          alt="An overview of the DISK framework"
+          height="463"
+          src="images/architecture.png"
+          width="589"
+        />
+        <figcaption>An Overview of the DISK framework</figcaption>
+      </figure>
+
+      <p>
+        An overview of the DISK framework can be seen in the image above,
+        illustrating how the four main objectives are integrated. First, a user
+        defines the hypothesis to test with the help of the interactive
+        discovery agent, which helps to transform the hypothesis statements into
+        a machine readable representation. If the hypothesis matches a line of
+        inquiry, then the system will start searching for the appropriate data
+        to test it, exploring open repositories like the
+        <a href="http://tcga-data.nci.nih.gov/">TCGA</a>.
+      </p>
+
+      <p>
+        When the data is found, the workflows in the line of inquiry are sent to
+        the workflow system, where they are executed. The results of the
+        execution are then stored in a Linked Data repository. Finally, the
+        repository is explored by the metaworkflows associated with the line of
+        inquiry to analyze the results of all the workflows and create a
+        revision of the original hypothesis.
+      </p>
+
+      <br />
     </div>
-</div>  
-  
-<div class="w3-center">
-    <div class="w3-bar w3-theme">
-      <a href="index.html" class="w3-bar-item w3-button w3-padding-8">Home</a>
-      <a href="portal.html" class="w3-bar-item w3-button w3-padding-8">Portal</a>
-      <a href="about.html" class="w3-bar-item w3-button w3-padding-8 selected">About</a>
-      <a href="people.html" class="w3-bar-item w3-button w3-padding-8">People</a>
-      <a href="papers.html" class="w3-bar-item w3-button w3-padding-8">Papers</a>
-      <a href="sponsors.html" class="w3-bar-item w3-button w3-padding-8">Sponsors</a>
-    </div>  
-</div>
-</header>
 
-<div class="w3-content w3-justify">
-  <h3 class="w3-center">The DISK Project</h3>  
-  <p>
-The automation of important aspects of scientific discovery will significantly accelerate.  Our claim is that given the right knowledge and methods, computers could autonomously carry out discovery processes by searching hypothesis spaces in a systematic, comprehensive, and efficient manner.<br /><br />
-In this project, we are investigating a novel approach to automate the hypothesize-test-evaluate discovery cycle with an intelligent system that a scientist can task with lines of inquiry to test hypotheses of interest.  We are implementing this approach in DISK (automated DIscovery of Scientific Knowledge), a system that extends the existing WINGS intelligent workflow system for scientific data analysis, and applying it to multi-omics.<br /><br />
-Our work to date has focused on four major research objectives:</p>
-
-<p>1) Representing hypotheses and associated evidence and confidence values;</p>
-
-<p>2) Formulating lines of inquiry that express how to test hypotheses by running data analysis workflows against the data available;</p>
-
-<p>3) Designing a meta-analysis engine that uses meta-workflows to assess the results of lines of inquiry and to revise and extend the original hypotheses accordingly; and</p>
-
-<p>4) Developing intelligent agents for interactive discovery that explain new findings to scientists.</p>
-
-<figure role="group" class="caption caption-img align-center"><img alt="An overview of the DISK framework" height="463" src="images/architecture.png" width="589" /><figcaption>An Overview of the DISK framework</figcaption></figure>
-
-<p>An overview of the DISK framework can be seen in the image above, illustrating how the four main objectives are integrated. First, a user defines the hypothesis to test with the help of the interactive discovery agent, which helps to transform the hypothesis statements into a machine readable representation. If the hypothesis matches a line of inquiry, then the system will start searching for the appropriate data to test it, exploring open repositories like the <a href="http://tcga-data.nci.nih.gov/">TCGA</a>.</p>
-
-<p>When the data is found, the workflows in the line of inquiry are sent to the workflow system, where they are executed. The results of the execution are then stored in a Linked Data repository. Finally, the repository is explored by the metaworkflows associated with the line of inquiry to analyze the results of all the workflows and create a revision of the original hypothesis.</p>
-
-  <br/>
-</div>
-
-<!-- Footer (defined in footer.html)-->
-<footer class="w3-container w3-theme-dark w3-padding-16" id ="footerContent">
-</footer>
-
-</body>
+    <!-- Footer (defined in footer.html)-->
+    <footer
+      class="w3-container w3-theme-dark w3-padding-16"
+      id="footerContent"
+    ></footer>
+  </body>
 </html>
