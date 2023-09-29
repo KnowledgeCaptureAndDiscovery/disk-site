@@ -476,6 +476,7 @@ a {
   border: none;
   display: block;
   outline: 0;
+  font-size: 1.2em;
 }
 .w3-bar .w3-dropdown-hover,
 .w3-bar .w3-dropdown-click {

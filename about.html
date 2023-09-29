@@ -46,7 +46,7 @@
             >Home</a
           >
           <a href="portal.html" class="w3-bar-item w3-button w3-padding-8"
-            >Portal</a
+            >Portals</a
           >
           <a
             href="about.html"
@@ -78,9 +78,9 @@
         hypothesize-test-evaluate discovery cycle with an intelligent system
         that a scientist can task with lines of inquiry to test hypotheses of
         interest. We are implementing this approach in DISK (automated DIscovery
-        of Scientific Knowledge), a system that extends the existing WINGS
+        of Scientific Knowledge), a system that uses the existing WINGS
         intelligent workflow system for scientific data analysis, and applying
-        it to multi-omics.<br /><br />
+        it to multiple domains.<br /><br />
         Our work to date has focused on four major research objectives:
       </p>
 
@@ -91,12 +91,12 @@
 
       <p>
         2) Formulating lines of inquiry that express how to test hypotheses by
-        running data analysis workflows against the data available;
+        running data analysis workflows against the latest data available;
       </p>
 
       <p>
         3) Designing a meta-analysis engine that uses meta-workflows to assess
-        the results of lines of inquiry and to revise and extend the original
+        the results of lines of inquiry and revise and extend the original
         hypotheses accordingly; and
       </p>
 
@@ -108,9 +108,8 @@
       <figure role="group" class="caption caption-img align-center">
         <img
           alt="An overview of the DISK framework"
-          height="463"
           src="images/architecture.png"
-          width="589"
+          width="100%"
         />
         <figcaption>An Overview of the DISK framework</figcaption>
       </figure>
@@ -120,19 +119,17 @@
         illustrating how the four main objectives are integrated. First, a user
         defines the hypothesis to test with the help of the interactive
         discovery agent, which helps to transform the hypothesis statements into
-        a machine readable representation. If the hypothesis matches a line of
-        inquiry, then the system will start searching for the appropriate data
-        to test it, exploring open repositories like the
-        <a href="http://tcga-data.nci.nih.gov/">TCGA</a>.
+        a machine readable representation.
+        If the hypothesis matches a line of inquiry, then the system will start searching for the appropriate data
+        to test it, exploring open repositories for each specific domain.
       </p>
 
       <p>
         When the data is found, the workflows in the line of inquiry are sent to
         the workflow system, where they are executed. The results of the
-        execution are then stored in a Linked Data repository. Finally, the
-        repository is explored by the metaworkflows associated with the line of
-        inquiry to analyze the results of all the workflows and create a
-        revision of the original hypothesis.
+        execution are then stored in the DISK system and can be used for posterior analysis.
+        Finally, the repository and previous results are explored by the metaworkflows associated with the line of
+        inquiry to create a revision of the original hypothesis.
       </p>
 
       <br />
