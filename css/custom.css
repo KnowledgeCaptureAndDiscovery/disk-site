@@ -1,0 +1,29 @@
+﻿/* W3.CSS 4.10 February 2018 by Jan Egil and Borge Refsnes */
+#topMenu {
+  padding-bottom: 0 !important;
+  border-bottom: 2px solid #909090;
+}
+
+#topMenu > .w3-center {
+  height: 43px;
+}
+
+body > div.w3-content {
+  height: calc(100vh - 250px);
+  padding: 24px 12px;
+  overflow: auto;
+}
+
+@media (max-height: 650px) {
+  body > div.w3-content {
+    height: 400px;
+    padding: 6px 12px;
+    overflow-y: scroll;
+  }
+}
+
+@media (min-height: 1200px) {
+  body > div.w3-content {
+    padding: 48px 12px;
+  }
+}
