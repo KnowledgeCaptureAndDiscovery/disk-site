@@ -9,9 +9,8 @@
 }
 
 body > div.w3-content {
-  height: calc(100vh - 250px);
+  min-height: calc(100vh - 250px);
   padding: 24px 12px;
-  overflow: auto;
 }
 
 @media (max-height: 650px) {
